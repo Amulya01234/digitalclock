@@ -41,5 +41,54 @@ body{
     font-size: 50px;
 }
 #alarm{
-
+     width: 80%;
+     height: 50%;
+     background-color: beige;
+     position: absolute;
+     display: none;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+     align-content: space-evenly;
+     align-items: center;
+     border-radius: 10px;
+     box-shadow: 5px 5px 5px black;
+}
+#buttonSetalarm{
+    position: absolute;
+    bottom: 30px;
+}
+#input{
+    width: 40%;
+    height: 40px;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+select{
+    width: 30%;
+    height: 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: royalblue;
+    font-weight: bold;
+}
+#closeAlarm{
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    cursor: pointer;
+}
+#alarmIcon{
+    width: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor:pointer;
 }

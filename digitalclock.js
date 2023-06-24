@@ -108,3 +108,49 @@ function digiclk()
     setTimeout(digiclk,1000)
 }
 digiclk()
+
+var alarmMus=new Audio();
+alarmMus.src="./let-it-go-let-it-go.mp3"
+function alarm()
+{
+    var allselectTags=document.querySelectorAll("select")
+    var userGivenHours=allselectTags[0].value
+    var userGivenMin=allselectTags[1].value
+    var userGivenAm_Pm=allselectTags[2].value
+    var date=new Date();
+    var hh=date.getHours();
+    var mm=date.getMinutes();
+    var am_pm="AM"
+    if(hh>=12){
+        am_pm="PM";
+        if (hh>12)
+        {
+            hh-=12;
+        }
+    }
+    if (hh==0)
+    {
+        hh=12;
+    }
+    if(userGivenHours==hh && userGivenMin==mm && userGivenAm_Pm==am_pm)
+    {
+        alarmMus.play()
+    }
+    else{
+        alarmMus.pause()
+    }
+    setTimeout(alarm,1000)
+}
+function alarmConf()
+{
+    var allselectTags=document.querySelectorAll("select")
+    var userGivenHours=allselectTags[0].value
+    var userGivenMin=allselectTags[1].value
+    var userGivenAm_Pm=allselectTags[2].value
+    alert(`Alarm has been setted for ${userGivenHours}:${userGivenMin}:${userGivenAm_Pm}`)
+    document.getElementById("alarm").style.display="none"
+}
+function alarmDisplay()
+{
+    document.getElementById("alarm").style.display="flex"
+}
